@@ -1,0 +1,219 @@
+/* Variables de tema */
+:root {
+    --color-bg: #f4f7fa;
+    --color-card: #ffffff;
+    --color-primary: #0052cc;
+    --color-secondary: #00a3e0;
+    --color-accent: #ff6f61;
+    --color-text: #1a1a1a;
+    --color-muted: #6c757d;
+    --radius: 8px;
+    --transition: 0.3s;
+    --font-sans: 'Inter', sans-serif;
+  }
+  
+  /* Reset ligero */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Centrar título de suscripción */
+  #suscripcion h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Tipografía y fondo */
+  body {
+    font-family: var(--font-sans);
+    font-size: 16px;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.6;
+    padding: 2rem;
+  }
+  
+  /* Enlaces */
+  a {
+    color: var(--color-secondary);
+    text-decoration: none;
+    transition: color var(--transition);
+  }
+  a:hover {
+    color: var(--color-primary);
+  }
+  
+  /* Encabezado */
+  header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  header h1 {
+    font-size: 2.75rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+  header p em {
+    color: var(--color-muted);
+    font-size: 0.95rem;
+  }
+  
+  /* Navegación moderna */
+  nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+    margin-bottom: 3rem;
+  }
+  nav a {
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius);
+    background-color: var(--color-card);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: background-color var(--transition), transform var(--transition);
+  }
+  nav a:hover {
+    background-color: var(--color-secondary);
+    transform: translateY(-2px);
+  }
+  
+  /* Contenedor de contenido */
+  main {
+    max-width: 900px;
+    margin: auto;
+    display: grid;
+    gap: 2rem;
+  }
+  
+  /* Secciones con tarjeta */
+  article section {
+    background-color: var(--color-card);
+    padding: 2rem;
+    border-radius: var(--radius);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  }
+  article h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--color-secondary);
+    padding-bottom: 0.5rem;
+  }
+  
+  /* Imágenes responsivas */
+  figure {
+    margin: 1.5rem 0;
+  }
+  figure img {
+    width: 100%;
+    border-radius: var(--radius);
+  }
+  figcaption {
+    font-size: 0.85rem;
+    color: var(--color-muted);
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+  
+  /* Listas estilizadas */
+  ul li, ol li {
+    margin-bottom: 0.75rem;
+    padding-left: 1.2rem;
+  }
+  ul li::marker {
+    color: var(--color-primary);
+  }
+  ol {
+    counter-reset: step-counter;
+  }
+  ol li {
+    counter-increment: step-counter;
+    margin-bottom: 1rem;
+  }
+  ol li::before {
+    content: counter(step-counter) ". ";
+    font-weight: 600;
+    color: var(--color-primary);
+  }
+  
+  /* Citas con estilo */
+  blockquote {
+    position: relative;
+    font-style: italic;
+    background-color: var(--color-bg);
+    border-left: 4px solid var(--color-accent);
+    padding: 1rem 1.5rem;
+    margin: 2rem 0;
+    color: var(--color-muted);
+  }
+  
+  /* Aside destacado */
+  aside {
+    background-color: var(--color-secondary);
+    padding: 1rem 1.5rem;
+    border-radius: var(--radius);
+    margin: 2rem 0;
+    color: var(--color-card);
+  }
+  
+  /* Formulario con inputs estilizados */
+  form {
+    background-color: var(--color-card);
+    padding: 2rem;
+    border-radius: var(--radius);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    max-width: 450px;
+    margin: auto;
+    text-align: center;
+  }
+  form h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+  }
+  form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    text-align: left;
+  }
+  form input[type="text"],
+  form input[type="email"] {
+    width: 80%;
+    padding: 0.5rem;
+    margin: 0.5rem auto 1rem;
+    border: 1px solid var(--color-secondary);
+    border-radius: var(--radius);
+    transition: border-color var(--transition), box-shadow var(--transition);
+  }
+  form input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(0, 82, 204, 0.2);
+  }
+  form button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--color-primary);
+    color: var(--color-card);
+    border: none;
+    border-radius: var(--radius);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color var(--transition), transform var(--transition);
+  }
+  form button:hover {
+    background-color: var(--color-accent);
+    transform: translateY(-2px);
+  }
+  
+  /* Pie de página centrado */
+  footer {
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 0.9rem;
+    color: var(--color-muted);
+  }
+  
